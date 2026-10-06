@@ -6,13 +6,31 @@ namespace libary
 {
     public class Book
     {
-        public string Title;
+        //Private fields
+        private string _title;
+        private string _author;
+        private int _isbn;
 
-        public string Author;
+        //Public properties
+        public string Title
+        {
+            get { return _title; }
+            set { _title = value; }
+        }   
+        public string Author
+        {
+            get { return _author; }
+            set { _author = value; }
+        }
+        public int ISBN
+        {
+            get { return _isbn; }
+            set { _isbn = value; }
+        }
 
-        public int ISBN;
 
-        //Paramaterized constructor
+
+        //Constructor
         public Book(string bookTitle, string bookAuthor, int bookISBN)
         {
             Title = bookTitle;
@@ -21,19 +39,15 @@ namespace libary
         }
 
 
-
-
-
-
-
-
-
+        //Methods
         public void DisplayInfo()
         {
             Console.WriteLine($"Book Title: {Title}");
             Console.WriteLine($"Book Author: {Author}");
             Console.WriteLine($"Book ISBN: {ISBN}");
         }
+
+
 
 
 
