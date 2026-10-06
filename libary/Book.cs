@@ -12,6 +12,22 @@ namespace libary
 
         public int ISBN;
 
+        //Paramaterized constructor
+        public Book(string bookTitle, string bookAuthor, int bookISBN)
+        {
+            Title = bookTitle;
+            Author = bookAuthor;
+            ISBN = bookISBN;
+        }
+
+
+
+
+
+
+
+
+
         public void DisplayInfo()
         {
             Console.WriteLine($"Book Title: {Title}");
@@ -19,5 +35,7 @@ namespace libary
             Console.WriteLine($"Book ISBN: {ISBN}");
         }
 
+
+
     }
-}
+} 
